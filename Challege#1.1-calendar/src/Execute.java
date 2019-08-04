@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Execute {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int sum=0;
+        long sum=0;
 
 
         while (true) {
@@ -15,40 +15,43 @@ public class Execute {
                     String input=sc.next();
                     int dd=Integer.parseInt(input.substring(0,2));
                     int mm=Integer.parseInt(input.substring(3,5));
-                    float yy=Float.parseFloat(input.substring(6));
-
-                    float days= dd+(31*(mm-1))+(365*(yy-1));
-                    int rem= (int)days%7;
-                    switch (rem){
-                        case 0:
+                    long yy=Long.parseLong(input.substring(6));
+                    System.out.println(dd);
+                    System.out.println(mm);
+                    System.out.println(yy);
+                    long days= (dd-1)+(31*(mm-1))+(365*(yy-1));
+                    long rem= days%7;
+                    sum=sum+rem;
+                    /*switch (rem){
+                        case 6:
                             System.out.println("Sunday");
                             sum+=6;
                             break;
-                        case 1:
+                        case 0:
                             System.out.println("Monday");
                             sum+=0;
                             break;
-                        case 2:
+                        case 1:
                             System.out.println("Tuesday");
                             sum+=1;
                             break;
-                        case 3:
+                        case 2:
                             System.out.println("Wednesday");
                             sum+=2;
                             break;
-                        case 4:
+                        case 3:
                             System.out.println("Thursday");
                             sum+=3;
                             break;
-                        case 5:
+                        case 4:
                             System.out.println("Friday");
                             sum+=4;
                             break;
-                        case 6:
+                        case 5:
                             System.out.println("Saturday");
                             sum+=5;
                             break;
-                    }
+                    }*/
                     break;
 
                 case 2:

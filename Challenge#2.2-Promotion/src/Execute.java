@@ -1,3 +1,5 @@
+/*I HAVEN'T TAKEN N AS INPUT FROM USER AS I DID IT WITHOUT USING N*/
+
 import java.util.Scanner;
 
 public class Execute {
